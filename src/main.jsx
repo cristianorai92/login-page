@@ -3,6 +3,20 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { ToastContainer } from 'react-toastify'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Cadastro from './pages/cadastro.jsx'
+
+const router = createBrowserRouter([
+
+  {
+    path: "/",
+    element: <App />
+  },
+  {
+    path: "/cadastro",
+    element: <Cadastro />
+  }
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -11,6 +25,6 @@ createRoot(document.getElementById('root')).render(
       autoCloss={500}
       theme="colored"
     />
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
 )

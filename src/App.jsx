@@ -14,7 +14,7 @@ export default function App() {
 
     }
 
-    if(password.length <8){
+    if(password.length <8) {
       toast.error("A senha deve ter no mínimo 8 caracteres!")
     return
     }
